@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TeamMatchesComponent } from './team-matches/team-matches.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TeamMatchComponent } from './team-match/team-match.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamMatchesComponent,
+    TeamMatchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
