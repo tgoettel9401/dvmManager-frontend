@@ -1,4 +1,5 @@
 export interface Game {
+  boardNumber: number;
   playerHome: string;
   playerAway: string;
   playerHomeColor: string;
