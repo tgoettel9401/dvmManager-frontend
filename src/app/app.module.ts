@@ -8,6 +8,10 @@ import { TeamMatchesComponent } from './team-matches/team-matches.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamMatchComponent } from './team-match/team-match.component';
 
+// Angular Material
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,11 @@ import { TeamMatchComponent } from './team-match/team-match.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    // Angular Material
+    MatCardModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

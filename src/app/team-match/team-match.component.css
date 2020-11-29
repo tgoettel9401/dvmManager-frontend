@@ -1,0 +1,23 @@
+mat-table {
+  width: 40%;
+}
+
+mat-header-cell, mat-cell {
+  font-size: medium;
+}
+
+.mat-column-boardNumber {
+  flex: 0 0 10%;
+}
+
+.mat-column-playerHome {
+  flex: 0 0 37%;
+}
+
+.mat-column-playerAway {
+  flex: 0 0 37%;
+}
+
+.mat-column-result {
+  flex: 0 0 10%;
+}

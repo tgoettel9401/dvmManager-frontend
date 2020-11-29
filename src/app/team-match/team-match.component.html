@@ -1,5 +1,31 @@
-<ul>
-  <li *ngFor="let game of teamMatch.games">
-    {{game.playerHome}} - {{game.playerAway}}, {{game.result}}
-  </li>
-</ul>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- BoardNumber Column -->
+  <ng-container matColumnDef="boardNumber">
+      <mat-header-cell *matHeaderCellDef>Brett</mat-header-cell>
+      <mat-cell *matCellDef="let row"></mat-cell>
+  </ng-container>
+
+  <!-- PlayerHome Column -->
+  <ng-container matColumnDef="playerHome">
+      <mat-header-cell *matHeaderCellDef>{{teamMatch.teamHome}}</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.playerHome}}</mat-cell>
+  </ng-container>
+
+  <!-- PlayerAway Column -->
+  <ng-container matColumnDef="playerAway">
+      <mat-header-cell *matHeaderCellDef>{{teamMatch.teamAway}}</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.playerAway}}</mat-cell>
+  </ng-container>
+
+  <!-- Result Column -->
+  <ng-container matColumnDef="result">
+      <mat-header-cell *matHeaderCellDef>{{teamMatch.result}}</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.result}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+

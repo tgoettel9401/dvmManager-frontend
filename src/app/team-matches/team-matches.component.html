@@ -1,4 +1,3 @@
-<div *ngFor="let teamMatch of teamMatches">
-  <strong>{{teamMatch.teamHome}} - {{ teamMatch.teamAway}}, {{ teamMatch.pointsTeamHome }} - {{ teamMatch.pointsTeamAway }} </strong>
+<mat-card *ngFor="let teamMatch of teamMatches">
   <app-team-match [teamMatch]="teamMatch"></app-team-match>
-</div>
+</mat-card>
