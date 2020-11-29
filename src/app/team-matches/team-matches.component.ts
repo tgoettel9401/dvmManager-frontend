@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Observable } from 'rxjs';
+import { startWith, switchMap } from 'rxjs/operators';
 import { TeamMatch } from '../models/team-match';
 import { DataService } from '../services/data.service';
 
@@ -18,7 +20,10 @@ export class TeamMatchesComponent implements OnInit {
   }
 
   getTeamMatches(): void {
-    this.dataService.getTeamMatches().subscribe(
+    interval(5000).pipe(
+      startWith(0),
+      switchMap(() => this.dataService.getTeamMatches()))
+    .subscribe(
       data => this.teamMatches = data,
       error => console.log(error)
     );
