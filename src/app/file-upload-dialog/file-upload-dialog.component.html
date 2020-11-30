@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Upload SwissChess Files</h2>
+
+<mat-dialog-content>
+
+  <mat-label>Add the {{fileType}} file</mat-label> <br>
+  <input type="file" accept="{{'.' + fileType}}" (change)="selectFile($event)" />
+
+  <button mat-button color="primary" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+</mat-dialog-actions>
