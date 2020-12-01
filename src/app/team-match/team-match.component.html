@@ -20,8 +20,8 @@
 
   <!-- Result Column -->
   <ng-container matColumnDef="result">
-      <mat-header-cell *matHeaderCellDef>{{teamMatch.result}}</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row.result}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef style="text-align: center; justify-content:center;">{{teamMatch.result}}</mat-header-cell>
+      <mat-cell *matCellDef="let row" style="text-align: center; justify-content:center;">{{row.result}}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
