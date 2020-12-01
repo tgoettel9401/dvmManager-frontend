@@ -20,7 +20,7 @@ export class TeamComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.team.players);
-    this.displayedColumns = ['id', 'firstName', 'lastName', 'accessToken'];
+    this.displayedColumns = ['id', 'firstName', 'lastName', 'accessToken', 'liChessName'];
   }
 
 }

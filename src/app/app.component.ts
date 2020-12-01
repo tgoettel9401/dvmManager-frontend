@@ -30,7 +30,7 @@ export class AppComponent {
 
   checkAccounts(): void {
     this.dataService.checkAccounts().subscribe(
-      data => this.snackBar.open(this.getInvalidAccountString(data)),
+      data => this.snackBar.open(this.getInvalidAccountString(data), 'close'),
       err => this.snackBar.open(err)
     );
   }

@@ -20,7 +20,10 @@ export class TeamsComponent implements OnInit {
   }
 
   getTeams(): void {
-    this.dataService.getTeams().subscribe(
+    interval(5000).pipe(
+      startWith(0),
+      switchMap(() => this.dataService.getTeams()))
+    .subscribe(
       data => this.teams = data,
       error => console.log(error)
     );

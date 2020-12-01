@@ -2,29 +2,35 @@
 
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!-- BoardNumber Column -->
+  <!-- ID Column -->
   <ng-container matColumnDef="id">
       <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
       <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
   </ng-container>
 
-  <!-- PlayerHome Column -->
+  <!-- FirstName Column -->
   <ng-container matColumnDef="firstName">
       <mat-header-cell *matHeaderCellDef>First-Name</mat-header-cell>
       <mat-cell *matCellDef="let row">{{row.firstName}}</mat-cell>
   </ng-container>
 
-  <!-- PlayerAway Column -->
+  <!-- LastName Column -->
   <ng-container matColumnDef="lastName">
       <mat-header-cell *matHeaderCellDef>Last-Name</mat-header-cell>
       <mat-cell *matCellDef="let row">{{row.lastName}}</mat-cell>
   </ng-container>
 
-  <!-- Result Column -->
+  <!-- AccessToken Column -->
   <ng-container matColumnDef="accessToken">
       <mat-header-cell *matHeaderCellDef>Access-Token</mat-header-cell>
       <mat-cell *matCellDef="let row">{{row.accessToken}}</mat-cell>
   </ng-container>
+
+  <!-- LiChessName Column -->
+  <ng-container matColumnDef="liChessName">
+    <mat-header-cell *matHeaderCellDef>Lichess-Name</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.liChessName}}</mat-cell>
+</ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
