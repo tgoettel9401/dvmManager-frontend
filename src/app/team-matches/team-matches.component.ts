@@ -20,7 +20,7 @@ export class TeamMatchesComponent implements OnInit {
   }
 
   getTeamMatches(): void {
-    interval(5000).pipe(
+    interval(2000).pipe(
       startWith(0),
       switchMap(() => this.dataService.getTeamMatches()))
     .subscribe(
