@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TeamMatch } from '../models/team-match';
+import { Team } from '../models/team';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class DataService {
 
   getTeamMatches(): Observable<TeamMatch[]> {
     return this.httpClient.get<TeamMatch[]>(this.baseUrl + 'api/getTeamMatches');
+  }
+
+  getTeams(): Observable<Team[]> {
+    return this.httpClient.get<Team[]>(this.baseUrl + 'api/getTeams');
   }
 
   performShutdown(): Observable<any> {

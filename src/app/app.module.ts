@@ -18,6 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AppComponent,
     TeamMatchesComponent,
     TeamMatchComponent,
-    FileUploadDialogComponent
+    FileUploadDialogComponent,
+    TeamsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

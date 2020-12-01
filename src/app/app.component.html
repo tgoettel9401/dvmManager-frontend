@@ -1,15 +1,14 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="/assets/dsjLogo.jpeg"
-  />
-  <span>DVM-Manager</span>
+  <a routerLink="/teamMatches"><img width="40" alt="DSJ Logo" src="/assets/dsjLogo.jpeg"></a>
+  <span>DVM-Manager</span> &nbsp; &nbsp; &nbsp; &nbsp;
+  <button mat-raised-button routerLink="/teamMatches">Team-Matches</button> &nbsp; &nbsp; &nbsp; &nbsp;
+  <button mat-raised-button routerLink="/teams">Teams</button> &nbsp; &nbsp; &nbsp; &nbsp;
 
 </div>
 
 <div class="content">
+
   <button mat-raised-button color="warn" (click)="performShutdown()">Shutdown</button> &nbsp;
   <button mat-raised-button color="primary" (click)="openFileUploadDialog('lst')">LST-Upload</button> &nbsp;
   <button mat-raised-button color="primary" (click)="openFileUploadDialog('pgn')">PGN-Upload</button> &nbsp;
@@ -17,7 +16,8 @@
   <button mat-raised-button color="accent" (click)="createChallenges()">Create Challenges</button>
 
   <br> <br>
-  <app-team-matches></app-team-matches>
+
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
+

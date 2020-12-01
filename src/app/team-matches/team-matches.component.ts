@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Observable } from 'rxjs';
+import { interval } from 'rxjs';
 import { startWith, switchMap } from 'rxjs/operators';
 import { TeamMatch } from '../models/team-match';
 import { DataService } from '../services/data.service';
@@ -28,5 +28,7 @@ export class TeamMatchesComponent implements OnInit {
       error => console.log(error)
     );
   }
+
+
 
 }
