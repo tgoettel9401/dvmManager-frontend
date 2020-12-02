@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Send Broadcast-Message</h2>
+
+<p>The message you enter below will be sent to all participants of our tournament!</p>
+
+<mat-dialog-content>
+  <input matInput type="text" #adminToken placeholder="Add your token here">
+  <br>
+  <textArea #message matInput placeholder="Add text"></textArea>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button" color = "warn" (click)="close()">Close</button>
+    <button class="mat-raised-button" color = "primary" (click)="sendMessages(message.value, adminToken.value)">Send message</button>
+</mat-dialog-actions>
+
+

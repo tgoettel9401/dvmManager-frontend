@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { BroadcastDialogComponent } from './broadcast-dialog/broadcast-dialog.component';
 import { FileUploadDialogComponent } from './file-upload-dialog/file-upload-dialog.component';
 import { DataService } from './services/data.service';
 
@@ -37,6 +38,14 @@ export class AppComponent {
 
   createChallenges(): void {
     this.dataService.createChallenges().subscribe();
+  }
+
+  openBroadcastDialog(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '400px';
+
+    this.dialog.open(BroadcastDialogComponent, dialogConfig);
   }
 
   private getInvalidAccountString(stringArray: string[]): string {

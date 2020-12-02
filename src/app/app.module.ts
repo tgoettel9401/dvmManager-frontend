@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamComponent } from './team/team.component';
+import { BroadcastDialogComponent } from './broadcast-dialog/broadcast-dialog.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TeamComponent } from './team/team.component';
     TeamMatchComponent,
     FileUploadDialogComponent,
     TeamsComponent,
-    TeamComponent
+    TeamComponent,
+    BroadcastDialogComponent
   ],
   imports: [
     BrowserModule,

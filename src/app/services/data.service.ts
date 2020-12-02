@@ -56,4 +56,8 @@ export class DataService {
     return this.httpClient.get<any>(this.baseUrl + 'api/createChallenges');
   }
 
+  sendBroadcastMessage(message: string, adminToken: string): Observable<any> {
+    return this.httpClient.post<any>(this.baseUrl + 'api/sendBroadcastMessage', { text: message, token: adminToken });
+  }
+
 }
